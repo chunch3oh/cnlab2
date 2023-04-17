@@ -5,7 +5,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 {
 $myusername = mysqli_real_escape_string($db, $_POST['username']);
 $mypassword = mysqli_real_escape_string($db, $_POST['password']);
-$sql = "SELECT * FROM radcheck WHERE username='$myusername' and value='$mypassword>
+$sql = "SELECT * FROM radcheck WHERE username='$myusername' and value='$mypassword'";
 $result = mysqli_query($db, $sql);
 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 $count = mysqli_num_rows($result);
